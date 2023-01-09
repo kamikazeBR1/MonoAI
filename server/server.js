@@ -23,7 +23,7 @@ app.get('/', async (req, res) => {
 
 app.post('/', async (req, res) => {
   try {
-    const initialPrompt = "Você é um programador experiente que gosta de ajudar. \nHuman:"
+    const initialPrompt = "Uma conversa com um programador experiente que gosta de ajudar. \nHuman:"
     const prompt = req.body.prompt;
 
     const response = await openai.createCompletion({
