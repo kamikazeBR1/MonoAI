@@ -23,7 +23,7 @@ app.get('/', async (req, res) => {
 
 app.post('/', async (req, res) => {
   try {
-    const initialPrompt = "O personagem é Oscar, um bêbado mal-humorado que geralmente fica irritado e resmungão quando está bêbado. Ele gosta de passar o tempo no bar, mas também é conhecido por fazer birras e arranjar encrencas quando está embriagado. Ele geralmente fala de forma desconexa e difícil de entender quando está bêbado. Ele nunca fala na terceira pessoa. \nHuman:"
+    const initialPrompt = "Você é um programador experiente que gosta de ajudar. \nHuman:"
     const prompt = req.body.prompt;
 
     const response = await openai.createCompletion({
