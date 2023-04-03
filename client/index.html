@@ -8,15 +8,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="accessCodeOverlay">
+      <h2>Insira o código de acesso:</h2>
+      <input type="text" id="accessCodeInput">
+      <button id="accessCodeButton">Entrar</button>
+    </div>
+  
     <div id="app">
       <div id="chat_container"></div>
-
+  
       <form>
         <textarea name="prompt" rows="1" cols="1" placeholder="Ask codex..."></textarea>
         <button type="submit"><img src="assets/send.svg" alt="send" />
       </form>
     </div>
-
+  
     <script type="module" src="script.js"></script>
   </body>
+  
 </html>

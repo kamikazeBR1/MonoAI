@@ -118,3 +118,27 @@ form.addEventListener('keyup', (e) => {
         handleSubmit(e)
     }
 })
+
+// Get references to the access code elements
+const accessCodeOverlay = document.querySelector('#accessCodeOverlay');
+const accessCodeInput = document.querySelector('#accessCodeInput');
+const accessCodeButton = document.querySelector('#accessCodeButton');
+
+// Define the correct access code
+const correctAccessCode = '9ak2';
+
+// Add a click event listener to the access code button
+accessCodeButton.addEventListener('click', () => {
+  // Get the value of the access code input
+  const enteredAccessCode = accessCodeInput.value;
+
+  // Check if the entered access code is correct
+  if (enteredAccessCode === correctAccessCode) {
+    // If the access code is correct, remove the overlay and display the site content
+    accessCodeOverlay.remove();
+    // Your site content goes here...
+  } else {
+    // If the access code is incorrect, display an error message
+    alert('Código de acesso incorreto. Tente novamente.');
+  }
+});
